@@ -6,164 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="./list/style.css">
-    <link rel="stylesheet" href="./table/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <h1>Calculator</h1>
+    </header>
     <main>
-        <div class="tableCalculator">
-            <div>
-                <input type="text">
-            </div>
-            <table>
-                <tr>
-                    <td>
-                        <button>X</button>
-                    </td>
-                    <td>
-                        <button>X</button>
-                    </td>
-                    <td>
-                        <button>X</button>
-                    </td>
-                    <td>
-                        <button>X</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button>7</button>
-                    </td>
-                    <td>
-                        <button>8</button>
-                    </td>
-                    <td>
-                        <button>9</button>
-                    </td>
-                    <td>
-                        <button>X</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button>4</button>
-                    </td>
-                    <td>
-                        <button>5</button>
-                    </td>
-                    <td>
-                        <button>6</button>
-                    </td>
-                    <td>
-                        <button>X</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button>1</button>
-                    </td>
-                    <td>
-                        <button>2</button>
-                    </td>
-                    <td>
-                        <button>3</button>
-                    </td>
-                    <td colspan="2">
-                        <button>=</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button>X</button>
-                    </td>
-                    <td>
-                        <button>0</button>
-                    </td>
-                    <td>
-                        <button>X</button>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="listCalculator">
-            <div>
-                <input type="text">
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <button>X</button>
-                    </li>
-                    <li>
-                        <button>X</button>
-                    </li>
-                    <li>
-                        <button>X</button>
-                    </li>
-                    <li>
-                        <button>X</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <button>7</button>
-                    </li>
-                    <li>
-                        <button>8</button>
-                    </li>
-                    <li>
-                        <button>9</button>
-                    </li>
-                    <li>
-                        <button>X</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <button>4</button>
-                    </li>
-                    <li>
-                        <button>5</button>
-                    </li>
-                    <li>
-                        <button>6</button>
-                    </li>
-                    <li>
-                        <button>X</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <button>1</button>
-                    </li>
-                    <li>
-                        <button>2</button>
-                    </li>
-                    <li>
-                        <button>3</button>
-                    </li>
-                    <li colspan="2">
-                        <button>=</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <button>X</button>
-                    </li>
-                    <li>
-                        <button>0</button>
-                    </li>
-                    <li>
-                        <button>X</button>
-                    </li>
-                </ul>
+        <div class="container">
+            <div id="listCalculator" class="listCalculator">
+                <div class="display">
+                    <input type="text">
+                </div>
+                <div class="buttons">
+                    <button>AC</button>
+                    <button>+/-</button>
+                    <button>%</button>
+                    <button class="bigger1">÷</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>X</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>ー</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button class="bigger1">+</button>
+                    <button class="zero">0</button>
+                    <button class="bigger1">.</button>
+                    <button class="bigger1">=</button>
+                </div>
             </div>
         </div>
     </main>
-    <footer></footer>
 </body>
 
 </html>
