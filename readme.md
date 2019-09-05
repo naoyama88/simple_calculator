@@ -1,6 +1,8 @@
 # class_calculator
 - Calculator made in class as an assignment
 - Practice for simple Javascript
+- Github Pages
+    - [https://naoyama88.github.io/simple_calculator/](https://naoyama88.github.io/simple_calculator/)
 
 <p align="center">
     <img width="266.4px" height="538.4px" src="https://user-images.githubusercontent.com/15808541/64348896-d8312480-cfaa-11e9-8b24-7e9756bd1844.png" alt="calculator_screenshot"/>
