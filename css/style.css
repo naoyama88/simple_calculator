@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     text-decoration: none;
 }
 
@@ -65,11 +66,12 @@ main {
 }
 
 .calculator .buttons button {
-    border-radius: 50px;
+    border-radius: 6vw;
     font-size: 1.7rem;
     border: none;
     background-color: rgb(170, 170, 170);
     text-align: center;
+    padding: 0;
 }
 
 .calculator .buttons button.clearScreen {
