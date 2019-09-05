@@ -17,3 +17,9 @@
 - Decide which button do I put in calculator
 - CSS for all size of browser
 - JS is not so hard because the function is really simple
+
+## What I couldn't solve
+- Design things
+- The color of button is going to be weird when tap it on smart phone
+- Wanted charactors in display to get shrank when a lot of numbers or operators are put
+- Wanted to put ',' in every 3 numbers
