@@ -21,5 +21,5 @@
 ## What I couldn't solve
 - Design things
 - The color of button is going to be weird when tap it on smart phone
-- Wanted charactors in display to get shrank when a lot of numbers or operators are put
+- Wanted characters in display to get shrank when a lot of numbers or operators are put
 - Wanted to put ',' in every 3 numbers
