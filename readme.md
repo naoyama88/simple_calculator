@@ -7,7 +7,7 @@
 ## What I use
 - HTML
 - CSS
-- Inline JS
+- Vanilla JS (on html)
 
 ## What is most difficult
 - Decide which button do I put in calculator
