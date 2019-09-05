@@ -4,6 +4,10 @@
     text-decoration: none;
 }
 
+html {
+    touch-action: manipulation;
+}
+
 body {
     font-size: 16px;
 }
