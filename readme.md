@@ -12,4 +12,4 @@
 ## What is most difficult
 - Decide which button do I put in calculator
 - CSS for all size of browser
-- JS is not so hard because the function is really 
+- JS is not so hard because the function is really simple
