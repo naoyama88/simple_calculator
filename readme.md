@@ -2,7 +2,9 @@
 - Calculator made in class as an assignment
 - Practice for simple Javascript
 
-![image of calculator](https://user-images.githubusercontent.com/15808541/64304425-a2575600-cf40-11e9-8b38-ea434247d906.png)
+<div style="text-align:center;">
+<img src="https://user-images.githubusercontent.com/15808541/64348896-d8312480-cfaa-11e9-8b24-7e9756bd1844.png" alt="drawing" style="width:266.4px;height:538.4px;"/>
+</div>
 
 ## What I use
 - HTML
