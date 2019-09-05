@@ -1,4 +1,4 @@
-# class_calculator
+# simple_calculator
 - Calculator made in class as an assignment
 - Practice for simple Javascript
 - Github Pages
