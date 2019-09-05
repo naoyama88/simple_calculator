@@ -17,34 +17,89 @@
     </header>
     <main>
         <div class="container">
-            <div id="listCalculator" class="listCalculator">
+            <div id="calculator" class="calculator">
                 <div class="display">
-                    <input type="text">
+                    <span id="result">0</span>
                 </div>
-                <div class="buttons">
-                    <button>AC</button>
-                    <button>+/-</button>
-                    <button>%</button>
-                    <button class="bigger1">÷</button>
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>X</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>ー</button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button class="bigger1">+</button>
-                    <button class="zero">0</button>
-                    <button class="bigger1">.</button>
-                    <button class="bigger1">=</button>
+                <div class="buttons unselectable">
+                    <button onclick="clearScreen('AC')" id="clearScreen" class="clearScreen">AC</button>
+                    <button onclick="addOperator('/')" id="division" class="bigger1">÷</button>
+                    <button onclick="addNumber('7')" id="seven">7</button>
+                    <button onclick="addNumber('8')" id="eight">8</button>
+                    <button onclick="addNumber('9')" id="nine">9</button>
+                    <button onclick="addOperator('*')" id="multiplicacion">X</button>
+                    <button onclick="addNumber('4')" id="four">4</button>
+                    <button onclick="addNumber('5')" id="five">5</button>
+                    <button onclick="addNumber('6')" id="six">6</button>
+                    <button onclick="addOperator('-')" id="substraction">ー</button>
+                    <button onclick="addNumber('1')" id="one">1</button>
+                    <button onclick="addNumber('2')" id="two">2</button>
+                    <button onclick="addNumber('3')" id="three">3</button>
+                    <button onclick="addOperator('+')" id="addition" class="bigger1">+</button>
+                    <button onclick="addNumber('0')" id="zero" class="zero">0</button>
+                    <button onclick="addNumber('.')" id="point" class="bigger1">.</button>
+                    <button onclick="getResult('=')" id="equal" class="bigger1">=</button>
                 </div>
             </div>
         </div>
-    </main>
+    </main> 
+    <script>
+        let total = document.getElementById("result");
+        let finishedCalculation = true;
+
+        function addNumber(num) {
+            if (finishedCalculation) {
+                total.textContent = '0';
+            }
+            finishedCalculation = false;
+
+            const length = total.textContent.length;
+            if (num === '.' && length >= 1 && total.textContent[length - 1] === '.') {
+                // avoid duplication of point
+                return;
+            }
+            if (total.textContent === '0') {
+                if (num === '.') {
+                    total.textContent = total.textContent + num;
+                } else {
+                    total.textContent = num;
+                }
+            } else {
+                total.textContent = total.textContent + num;
+            }
+        }
+
+        function addOperator(operator) {
+            if (finishedCalculation) {
+                finishedCalculation = false;
+            }
+            if (total.textContent === '0') {
+                switch (operator) {
+                    case '/':
+                    case '*':
+                    case '+':
+                        break;
+                    case '-':
+                        total.textContent = operator;
+                        break;
+                } 
+            } else {
+                total.textContent = total.textContent + operator;
+            }
+        }
+
+        function getResult(operator) {
+            total.textContent = eval(total.textContent);
+            finishedCalculation = true;
+        }
+
+        function clearScreen(operator) {
+            total.textContent = "0";
+        }
+
+        // TODO 桁数計算（eval のwrapperを作成）
+        
+    </script>
 </body>
 
 </html>
