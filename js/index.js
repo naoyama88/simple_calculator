@@ -11,6 +11,8 @@ function setDisplayValue(value) {
 
 function addNumber(num) {
     clickInit();
+    debug(num);
+
     if (finishedCalculation) {
         totalValue = "0";
     }
@@ -25,6 +27,7 @@ function addNumber(num) {
 
 function addPoint() {
     clickInit();
+    debug('.');
     if (finishedCalculation) {
         totalValue = "0";
         finishedCalculation = false;
@@ -53,6 +56,7 @@ function addPoint() {
 
 function addOperator(operator) {
     clickInit();
+    debug(operator);
     finishedCalculation = false;
 
     if (totalValue === "-") {
@@ -82,6 +86,7 @@ function addOperator(operator) {
 
 function calculate() {
     clickInit();
+    debug('=');
     try {
         setDisplayValue(evalCalculation(totalValue).toString());
         finishedCalculation = true;
@@ -102,11 +107,13 @@ function calculate() {
 
 function allClear() {
     clickInit();
+    debug('AC');
     setDisplayValue("0");
 }
 
 function backSpace() {
     clickInit();
+    debug('←');
     const length = totalValue.length;
     if (length === 1) {
         setDisplayValue("0");
@@ -132,4 +139,8 @@ function clickInit() {
     document
         .getElementById("errorMessage")
         .classList.remove("errorMessage--active");
+}
+
+function debug(value) {
+    console.log(value, "(" + typeof value + ")");
 }
