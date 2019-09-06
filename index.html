@@ -12,40 +12,42 @@
 </head>
 
 <body>
-    <header>
-        <a href="/">
-            <h1>Calculator</h1>
-        </a>
-    </header>
-    <main>
-        <div class="container">
-            <div id="calculator" class="calculator">
-                <div class="display">
-                    <span id="total">0</span>
-                </div>
-                <div class="buttons unselectable">
-                    <button onclick="allClear()" id="clearScreen" class="clearScreen">AC</button>
-                    <button onclick="backSpace()" class="backSpace bigger">←</button>
-                    <button onclick="addOperator('/')" id="division" class="bigger">÷</button>
-                    <button onclick="addNumber('7')" id="seven">7</button>
-                    <button onclick="addNumber('8')" id="eight">8</button>
-                    <button onclick="addNumber('9')" id="nine">9</button>
-                    <button onclick="addOperator('*')" id="multiplicacion">X</button>
-                    <button onclick="addNumber('4')" id="four">4</button>
-                    <button onclick="addNumber('5')" id="five">5</button>
-                    <button onclick="addNumber('6')" id="six">6</button>
-                    <button onclick="addOperator('-')" id="substraction">ー</button>
-                    <button onclick="addNumber('1')" id="one">1</button>
-                    <button onclick="addNumber('2')" id="two">2</button>
-                    <button onclick="addNumber('3')" id="three">3</button>
-                    <button onclick="addOperator('+')" id="addition" class="bigger">+</button>
-                    <button onclick="addNumber('0')" id="zero" class="zero">0</button>
-                    <button onclick="addPoint()" id="point" class="bigger">.</button>
-                    <button onclick="calculate()" id="equal" class="bigger">=</button>
+    <div class="entireContainer">
+        <header>
+            <a href="/">
+                <h1>Calculator</h1>
+            </a>
+        </header>
+        <main>
+            <div class="container">
+                <div id="calculator" class="calculator">
+                    <div class="display">
+                        <span id="total">0</span>
+                    </div>
+                    <div class="buttons unselectable">
+                        <button onclick="allClear()" id="clearScreen" class="clearScreen">AC</button>
+                        <button onclick="backSpace()" class="backSpace bigger">←</button>
+                        <button onclick="addOperator('/')" id="division" class="bigger">÷</button>
+                        <button onclick="addNumber('7')" id="seven">7</button>
+                        <button onclick="addNumber('8')" id="eight">8</button>
+                        <button onclick="addNumber('9')" id="nine">9</button>
+                        <button onclick="addOperator('*')" id="multiplicacion" class="bigger astaDiv"><div class="asta">*</div></button>
+                        <button onclick="addNumber('4')" id="four">4</button>
+                        <button onclick="addNumber('5')" id="five">5</button>
+                        <button onclick="addNumber('6')" id="six">6</button>
+                        <button onclick="addOperator('-')" id="substraction">ー</button>
+                        <button onclick="addNumber('1')" id="one">1</button>
+                        <button onclick="addNumber('2')" id="two">2</button>
+                        <button onclick="addNumber('3')" id="three">3</button>
+                        <button onclick="addOperator('+')" id="addition" class="bigger">+</button>
+                        <button onclick="addNumber('0')" id="zero" class="zero">0</button>
+                        <button onclick="addPoint()" id="point" class="bigger">.</button>
+                        <button onclick="calculate()" id="equal" class="bigger">=</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
     <script>
         let totalDisplay = document.getElementById("total");
         let totalValue = '0';
@@ -95,7 +97,7 @@
                 setDisplayValue(operator);
             } else {
                 const length = totalValue.length;
-                switch(totalValue[length - 1]) {
+                switch (totalValue[length - 1]) {
                     case '+':
                     case '-':
                     case '*':
