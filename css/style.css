@@ -173,6 +173,20 @@ main {
     color: #ec2c2c;
     opacity: 0;
 }
+
 .errorMessage--active {
-    opacity: 1;
+    -webkit-animation: example 0.2s ease 0s 1 forwards;
+    animation: appear 0.2s ease 0s 1 forwards;
+}
+
+@-webkit-keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+    }
 }
