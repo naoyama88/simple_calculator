@@ -89,9 +89,13 @@ function calculate() {
         if (e instanceof SyntaxError) {
             console.log(totalValue);
             console.log("This formula cannot be calculated.");
-            document.getElementById('errorMessage').classList.add('errorMessage--active');
+            document
+                .getElementById("errorMessage")
+                .classList.add("errorMessage--active");
         } else {
-            console.log("I caught an error, but it wasn't a SyntaxError. I handle all non-SyntaxErrors here.");
+            console.log(
+                "I caught an error, but it wasn't a SyntaxError. I handle all non-SyntaxErrors here."
+            );
         }
     }
 }
@@ -125,5 +129,7 @@ function hasPoint(numStr) {
 }
 
 function clickInit() {
-    document.getElementById('errorMessage').classList.remove('errorMessage--active');
+    document
+        .getElementById("errorMessage")
+        .classList.remove("errorMessage--active");
 }
