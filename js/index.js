@@ -33,12 +33,17 @@ function addPoint() {
         case ".":
             // can't put 2 points in a row
             return;
-            break;
         case "+":
         case "-":
         case "*":
         case "/":
             totalValue = totalValue + "0";
+    }
+
+    let lastNumber = getLastOperand(totalValue);
+    if (hasPoint(lastNumber)) {
+        // point already exists
+        return;
     }
 
     setDisplayValue(totalValue + ".");
@@ -90,4 +95,17 @@ function backSpace() {
     } else {
         setDisplayValue(totalValue.slice(0, -1));
     }
+}
+
+function getLastOperand(numStr) {
+    return numStr.split(/(\+|\-|\*|\/)/).pop();
+}
+
+function hasPoint(numStr) {
+    if (numStr.match(/\./)) {
+        // point already exists
+        return true;
+    }
+
+    return false;
 }
