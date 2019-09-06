@@ -10,6 +10,7 @@ function setDisplayValue(value) {
 }
 
 function addNumber(num) {
+    clickInit();
     if (finishedCalculation) {
         totalValue = "0";
     }
@@ -23,6 +24,7 @@ function addNumber(num) {
 }
 
 function addPoint() {
+    clickInit();
     if (finishedCalculation) {
         totalValue = "0";
         finishedCalculation = false;
@@ -50,6 +52,7 @@ function addPoint() {
 }
 
 function addOperator(operator) {
+    clickInit();
     finishedCalculation = false;
 
     if (totalValue === "-") {
@@ -78,15 +81,28 @@ function addOperator(operator) {
 }
 
 function calculate() {
-    setDisplayValue(evalCalculation(totalValue).toString());
-    finishedCalculation = true;
+    clickInit();
+    try {
+        setDisplayValue(evalCalculation(totalValue).toString());
+        finishedCalculation = true;
+    } catch (e) {
+        if (e instanceof SyntaxError) {
+            console.log(totalValue);
+            console.log("This formula cannot be calculated.");
+            document.getElementById('errorMessage').classList.add('errorMessage--active');
+        } else {
+            console.log("I caught an error, but it wasn't a SyntaxError. I handle all non-SyntaxErrors here.");
+        }
+    }
 }
 
 function allClear() {
+    clickInit();
     setDisplayValue("0");
 }
 
 function backSpace() {
+    clickInit();
     const length = totalValue.length;
     if (length === 1) {
         setDisplayValue("0");
@@ -106,4 +122,8 @@ function hasPoint(numStr) {
     }
 
     return false;
+}
+
+function clickInit() {
+    document.getElementById('errorMessage').classList.remove('errorMessage--active');
 }
