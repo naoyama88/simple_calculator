@@ -113,6 +113,9 @@
                     case '/':
                         totalValue = totalValue.slice(0, -1) + operator;
                         break;
+                    case '.':
+                        totalValue = totalValue.slice(0, -1);
+                        break;
                     default:
                         // if the previous charactor is number
                         break;
