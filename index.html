@@ -80,9 +80,16 @@
             }
 
             const length = totalValue.length;
-            if (totalValue[length - 1] === '.') {
-                // can't put 2 points in a row
-                return;
+            switch(totalValue[length - 1]) {
+                case '.':
+                    // can't put 2 points in a row
+                    return;
+                    break;
+                case '+':
+                case '-':
+                case '*':
+                case '/':
+                    totalValue = totalValue + '0';
             }
 
             setDisplayValue(totalValue + '.');
