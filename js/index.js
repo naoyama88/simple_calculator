@@ -65,8 +65,6 @@ function addOperator(operator) {
             case "-":
             case "*":
             case "/":
-                totalValue = totalValue.slice(0, -1) + operator;
-                break;
             case ".":
                 totalValue = totalValue.slice(0, -1);
                 break;
