@@ -70,6 +70,9 @@ main {
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
+    opacity: 0;
+    animation: from90 1s ease 0.2s 1 forwards;
 }
 
 .calculator .display span {
@@ -104,6 +107,7 @@ main {
     background-color: rgb(170, 170, 170);
     text-align: center;
     padding: 0;
+    position: relative; /* to apply animation */
 }
 
 .calculator .buttons button.clearScreen {
@@ -176,17 +180,223 @@ main {
 
 .errorMessage--active {
     -webkit-animation: example 0.2s ease 0s 1 forwards;
-    animation: appear 0.2s ease 0s 1 forwards;
+    animation: appear-errorMessage 0.2s ease 0s 1 forwards;
 }
 
-@-webkit-keyframes appear {
+@-webkit-keyframes appear-errorMessage {
     100% {
         opacity: 1;
     }
 }
 
-@keyframes appear {
+@keyframes appear-errorMessage {
     100% {
         opacity: 1;
+    }
+}
+
+#clearScreen {
+    opacity: 0;
+    animation: from135 1.2s ease 0.2s 1 forwards;
+}
+#backSpace {
+    opacity: 0;
+    animation: from90 1.2s ease 0.2s 1 forwards;
+}
+#division {
+    opacity: 0;
+    animation: from45 1.2s ease 0.2s 1 forwards;
+}
+#seven {
+    opacity: 0;
+    animation: from135 1.2s ease 0.2s 1 forwards;
+}
+#eight {
+    opacity: 0;
+    animation: from90 1.2s ease 0.2s 1 forwards;
+}
+#nine {
+    opacity: 0;
+    animation: from45 1.2s ease 0.2s 1 forwards;
+}
+#multiplicacion {
+    opacity: 0;
+    animation: from30 1.2s ease 0.2s 1 forwards;
+}
+#four {
+    opacity: 0;
+    animation: from180 1.2s ease 0.2s 1 forwards;
+}
+#five {
+    opacity: 0;
+    animation: xxxx 1.2s ease 0.2s 1 forwards;
+}
+#six {
+    opacity: 0;
+    animation: from0 1.2s ease 0.2s 1 forwards;
+}
+#substraction {
+    opacity: 0;
+    animation: from0 1.2s ease 0.2s 1 forwards;
+}
+#one {
+    opacity: 0;
+    animation: from225 1.2s ease 0.2s 1 forwards;
+}
+#two {
+    opacity: 0;
+    animation: from270 1.2s ease 0.2s 1 forwards;
+}
+#three {
+    opacity: 0;
+    animation: from315 1.2s ease 0.2s 1 forwards;
+}
+#addition {
+    opacity: 0;
+    animation: from340 1.2s ease 0.2s 1 forwards;
+}
+#zero {
+    opacity: 0;
+    animation: from225 1.2s ease 0.2s 1 forwards;
+}
+#point {
+    opacity: 0;
+    animation: from315 1.2s ease 0.2s 1 forwards;
+}
+#equal {
+    opacity: 0;
+    animation: from315 1.2s ease 0.2s 1 forwards;
+}
+
+@keyframes from0 {
+    0% {
+        opacity: 0;
+        left: 10px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes from30 {
+    0% {
+        opacity: 0;
+        left: 10px;
+        top: -8px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes from45 {
+    0% {
+        opacity: 0;
+        left: 10px;
+        top: -10px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes from90 {
+    0% {
+        opacity: 0;
+        top: -10px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes from135 {
+    0% {
+        opacity: 0;
+        top: -10px;
+        left: -10px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes from180 {
+    0% {
+        opacity: 0;
+        left: -10px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes from225 {
+    0% {
+        opacity: 0;
+        left: -10px;
+        top: 10px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes from270 {
+    0% {
+        opacity: 0;
+        top: 10px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes from315 {
+    0% {
+        opacity: 0;
+        left: 10px;
+        top: 10px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes from340 {
+    0% {
+        opacity: 0;
+        left: 10px;
+        top: 8px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes xxxx {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
